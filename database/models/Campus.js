@@ -20,7 +20,14 @@ const Campus = db.define("campus", {
 
   description: {
     type: Sequelize.STRING,
+  },
+
+    imageurl: {
+    type: Sequelize.STRING,
+    defaultValue: 'https://news.harvard.edu/wp-content/uploads/2024/03/admissions_2028_111623_Features_DG_0013-2500-2048x1366.jpg', 
+    allowNull: true,
   }
+  
 });
 
 // Export the campus model
