@@ -57,9 +57,7 @@ router.put('/:id', ash(async(req, res) => {
 
 // ENROLL NEW STUDENT
 router.put(':studentId/enrollnew', ash(async (req, res) => {
-  // const { campusId } = req.params.campusId;
   Student.create(req.body)
-    // .setCampus(campusId)
     .then(createdStudent => res.status(200).json(createdStudent))
     .catch(err => next(err));
 }));
