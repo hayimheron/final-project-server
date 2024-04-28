@@ -15,6 +15,36 @@ const Student = db.define("student", {
   lastname: {
     type: Sequelize.STRING,
     allowNull: false
+  },
+
+  email: {
+    type: Sequelize.STRING,
+    allowNull: false,
+    validate: {
+      notEmpty: true,
+      isEmail: true,
+    },
+  },
+
+  imageurl: {
+    type: Sequelize.STRING,
+    // defaultValue: 'https://www.timeshighereducation.com/sites/default/files/styles/article785xauto/public/capture_1.png', 
+    allowNull: true,
+  },
+
+  gpa: {
+    type: Sequelize.DECIMAL(3, 1), // Use precision of 3 digits, 1 decimal place
+    allowNull: true,
+    validate: {
+      isDecimal: true,
+      min: 0.0,
+      max: 4.0,
+    },
+  },
+  
+  campusId: {
+    type: Sequelize.INTEGER,
+    allowNull: true,
   }
 });
 
