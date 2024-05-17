@@ -1,7 +1,6 @@
-# Team Members
+# Solo
 
 Hayim Heron @hayimheron
-
 
 # server-starter-code
 
